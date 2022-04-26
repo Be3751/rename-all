@@ -11,15 +11,15 @@ origin：元画像，変換に失敗した場合の元画像バックアップ
 
 ## 使い方
 ### Pythonを用いる場合
-`python3 main.py 対象ディレクトリ名`
+`python3 main.py 対象ディレクトリ名 識別番号の開始位置`
 
 ## 動作例
 実行：  
-`python3 main.py fhoge`
+`python3 main.py fhoge 4`
 
 結果：  
-`renamed './fhoge/gjaege.png' into './fhoge/fhoge_01.png'.`  
-`renamed './fhoge/ba81b.png' into './fhoge/fhoge_02.png'.`  
-`renamed './fhoge/pg1jr2.png' into './fhoge/fhoge_03.png'.`  
-`renamed './fhoge/2jhnge.png' into './fhoge/fhoge_04.png'.`  
-`renamed './fhoge/ge42dbr.png' into './fhoge/fhoge_05.png'.`
+`renamed './fhoge/gjaege.png' into './fhoge/fhoge_04.png'.`  
+`renamed './fhoge/ba81b.png' into './fhoge/fhoge_05.png'.`  
+`renamed './fhoge/pg1jr2.png' into './fhoge/fhoge_06.png'.`  
+`renamed './fhoge/2jhnge.png' into './fhoge/fhoge_07.png'.`  
+`renamed './fhoge/ge42dbr.png' into './fhoge/fhoge_08.png'.`
