@@ -3,21 +3,23 @@ import sys
 import glob
 
 def main():
-    target_dir = sys.argv[1]
-    print(f"target directory: {target_dir}")
+    target_dir, head_id = sys.argv[1], int(sys.argv[2])
+    if head_id == None:
+        head_id = 1
+    elif target_dir == None:
+        print("Please include first param followed by main.py.")
+        return
 
     print(f"Are you sure to rename all files in this directory into {target_dir}?: [Y/n]")
     intention = input()
+
     if intention == "n":
         return
     elif intention == "Y":
-        if(target_dir): # コマンドライン引数が不足していた場合のエラーハンドリング
-            pass
         target_files = glob.glob(f"./{target_dir}/*")
 
-        # 変換後ファイル名と識別番号を組み合わせたファイル名で対象ファイル名を上書き
         for id, target_file_path in enumerate(target_files):
-            rename_with_id(target_file_path, target_dir, str(id+1))
+            rename_with_id(target_file_path, target_dir, str(head_id + id))
     else:
         print("Please input Y or n.")
 
